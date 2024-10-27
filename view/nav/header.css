@@ -1,0 +1,128 @@
+.logo {
+    width: 84px;
+    height: 90px;
+}
+
+
+
+nav > ul > li > p {
+    margin-left: 100px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 8px;
+}
+
+nav li {
+    margin: 8px 15px;
+}
+
+nav li > a {
+    color: #003336;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+header nav li > a::after {
+    content: " ";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    transition: 300ms ease-in-out;
+}
+
+header nav li > a:hover::after {
+    width: 100%;
+}
+
+nav a.inicio {
+    padding: 10px 22px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: white;
+    transition: 250ms ease-out;
+}
+
+nav a.inicio::after {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    color: var(--cor-rosa);
+    font-weight: 500;    
+    margin-right: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.faixa {
+    height: 15px;
+    width: 100%;
+    background-color: #5ca2e4;
+}
+
+header img {
+    width: 140px;
+    margin-left: 20%;
+    margin-top: 3%;
+    
+}
+
+
+.dropbtn {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #003336;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    font-size: 15px;
+    display: none;
+    position: absolute;
+    background-color: var(--cor-rosa-claro);
+    color: #ffffff;
+    border-radius: 10px;
+    top: 29px;
+    min-width: 240px;
+    font-weight: 600;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: var(--cor-nav-link);
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block; 
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: var(--cor-rosa-escuro);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
