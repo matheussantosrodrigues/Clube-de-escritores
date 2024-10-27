@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuários</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
+</head>
 <body>
-    <header>        
-        <p class="titulo">Cadastrar Usuário</p>
+    <header>
+        <p class="titulo">Formulário de Login</p>
     </header>
     <main>
-        <form action="../controller/recebeDados.php" method="POST">
+        <form action="../view/validar.php" method="POST">
             <div class="input">
-                <label for="nome">Nome:</label>
-                <input type="text" id="usuario" name="usuario"  required>
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="txtusuario" name="txtusuario" required>
             </div>
             <div class="input">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="txtsenha" name="txtsenha" required>
             </div>
             <button type="submit" class="button">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <div class="front">
-                    <span>Cadastrar</span>
+                    <span>Entrar</span>
                 </div>
             </button>
         </form>
