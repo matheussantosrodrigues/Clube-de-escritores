@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuários</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script defer src="nav/script.js"></script>
+    <link rel="stylesheet" href="nav/header.css">
 <body>
-    <header>        
-        <p class="titulo">Cadastrar Usuário</p>
-    </header>
-    <main>
+    <main-header base-url="./" base-nav="../" base-img="./img/"></main-header>
+
+    <p class="titulo">Cadastrar Usuário</p>
+    <div class="meio">
         <form action="../controller/recebeDados.php" method="POST">
             <div class="input">
                 <label for="nome">Nome:</label>
@@ -27,6 +29,6 @@
                 </div>
             </button>
         </form>
-    </main>
+    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-include_once '../view/login.php';
+include '../view/login.php';
 require_once '../model/conexao.php';
 
 $conn = new Conexao();

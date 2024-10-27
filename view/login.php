@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script defer src="./view/nav/script.js"></script>
+    <link rel="stylesheet" href="./view/nav/header.css">
+    <script defer src="nav/script.js"></script>
+    <link rel="stylesheet" href="nav/header.css">
 </head>
 <body>
-    <header>
-        <p class="titulo">Formulário de Login</p>
-    </header>
-    <main>
+    <main-header base-url="./" base-nav="../" base-img="./img/"></main-header>
+
+    <p class="titulo">Logar</p>
+    <div class="meio">
         <form action="../view/validar.php" method="POST">
             <div class="input">
                 <label for="usuario">Usuário:</label>
@@ -27,6 +31,6 @@
                 </div>
             </button>
         </form>
-    </main>
+    </div>
 </body>
 </html>
