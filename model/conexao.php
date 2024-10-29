@@ -26,7 +26,7 @@ Class Conexao {
     }
 
     public function insere($usuario, $senha) {
-        $insere = $this->conn->prepare("insert into cadastro (usuario, senha) 
+        $insere = $this->conn->prepare("insert into usuario (usuario, senha) 
         values (:u, :s)");
         $insere->bindValue(":u", $usuario);
         $insere->bindValue(":s", $senha);
@@ -37,7 +37,7 @@ Class Conexao {
     }
 
     public function buscarUsuario($usuario, $senha) {
-        $stmt = $this->conn->prepare("SELECT * FROM cadastro WHERE usuario = :usuario AND senha = :senha");
+        $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE usuario = :usuario AND senha = :senha");
         $stmt->bindParam(':usuario', $usuario);
         $stmt->bindParam(':senha', $senha);
         $stmt->execute();
