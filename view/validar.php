@@ -5,31 +5,28 @@ include_once '../view/login.php';
 $conn = new Conexao();
 $conn->conectar();
 
-$usuarioForm = addslashes($_POST['txtusuario']);
+$usuarioOuEmailForm = addslashes($_POST['txtusuarioemail']);
 $senhaForm = addslashes($_POST['txtsenha']);
 
 session_start();
 $usuarioAdmin = 'Adm';
+$emailAdmin = 'Adm@gmail.com';
 $senhaAdmin = '123';
 
-$usuario = $_POST['usuario'] ?? '';
-$senha = $_POST['senha'] ?? '';
-
 // Verificação para o admin
-if ($usuarioForm === $usuarioAdmin && $senhaForm === $senhaAdmin) {
-    $_SESSION['usuario'] = $usuarioForm;
+if (($usuarioOuEmailForm === $usuarioAdmin || $usuarioOuEmailForm === $emailAdmin) && $senhaForm === $senhaAdmin) {
+    $_SESSION['usuario'] = $usuarioAdmin; // Armazena o usuário admin
     header('Location: telaInicialAdmin.php');
     exit();
 } 
 
 // Verificação para usuário normal (busca no banco)
-$usuarioBanco = $conn->buscarUsuario($usuarioForm, $senhaForm);
+$usuarioBanco = $conn->buscarUsuario($usuarioOuEmailForm, $senhaForm);
 if ($usuarioBanco) {
-    $_SESSION['usuario'] = $usuarioBanco['usuario'];
+    $_SESSION['usuario'] = $usuarioBanco['usuario']; // Armazena apenas o usuário
     header('Location: telaInicial.php');
     exit();
 } else {
     echo "Dados incorretos!";
 }
-
 ?>
