@@ -12,15 +12,26 @@
 
     <p class="titulo">Cadastrar Usuário</p>
     <div class="meio">
-        <form action="../controller/recebeDados.php" method="POST">
+        <form action="../controller/recebeDados.php" method="POST" enctype="multipart/form-data">
+
             <div class="input">
                 <label for="nome">Nome:</label>
                 <input type="text" id="usuario" name="usuario"  required>
             </div>
+
+            <div class="input">
+                <label for="nome">Email:</label>
+                <input type="text" id="email" name="email"  required>
+            </div>
+
+                <label>SELECIONE O ARQUIVO</label>
+                <input name="upload" type="file" accept="image/png, image/jpeg"  multiple><br><br>
+
             <div class="input">
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required>
             </div>
+
             <button type="submit" class="button">
                 <span class="shadow"></span>
                 <span class="edge"></span>
