@@ -5,9 +5,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
     <script defer src="./view/nav/script.js"></script>
-    <link rel="stylesheet" href="./view/nav/header.css">
-    <script defer src="nav/script.js"></script>
-    <link rel="stylesheet" href="nav/header.css">
+    <link rel="stylesheet" href="../nav/header.css">
+    <script defer src="../nav/script.js"></script>
 </head>
 <body>
     <main-header base-url="./" base-nav="../" base-img="./img/"></main-header>
