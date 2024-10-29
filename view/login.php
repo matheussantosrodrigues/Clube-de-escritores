@@ -15,8 +15,8 @@
     <div class="meio">
         <form action="../view/validar.php" method="POST">
             <div class="input">
-                <label for="usuario">Usuário:</label>
-                <input type="text" id="txtusuario" name="txtusuario" required>
+                <label for="usuario">Usuário ou email:</label>
+                <input type="text" id="txtusuarioemail" name="txtusuarioemail" required>
             </div>
             <div class="input">
                 <label for="senha">Senha:</label>

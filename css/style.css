@@ -34,20 +34,28 @@ body {
 input {
   width: 160px;               
   padding: 3px;              
-  border: 1px solid #ccc;     /* Borda de cor cinza clara */
-  border-radius: 7px;         /* Arredondamento da borda */
-  background-color: #f9f9f9;  /* Cor de fundo */
-  font-size: 16px;            /* Tamanho da fonte */
-  color: #333;                /* Cor do texto */
-  outline: none;              /* Remove o contorno padrão */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: all 0.3s ease;  /* Transição suave para efeitos */
+  border: 1px solid #ccc;     
+  border-radius: 7px;         
+  background-color: #f9f9f9;  
+  font-size: 16px;            
+  color: #333;               
+  outline: none;             
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;  
 }
 
 input:focus {
-  border-color: #0e2b7a;      /* Cor da borda ao focar */
-  box-shadow: 0px 4px 12px rgba(2, 24, 48, 0.3); /* Sombra azul */
-  background-color: #ffffff;  /* Fundo branco ao focar */
+  border-color: #0e2b7a;      
+  box-shadow: 0px 4px 12px rgba(2, 24, 48, 0.3); 
+  background-color: #ffffff;  
+}
+
+input#input-especifico {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 380px !important;               
+  border-radius: 0 !important; 
+  border: 0 !important; 
+  padding: 0 !important; 
 }
 
 

@@ -42,12 +42,13 @@ class Conexao {
         }
     }
 
-    public function buscarUsuario($usuario, $senha) {
-        $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE usuario = :usuario AND senha = :senha");
-        $stmt->bindParam(':usuario', $usuario);
+    public function buscarUsuario($usuarioOuEmail, $senha) {
+        $stmt = $this->conn->prepare("SELECT * FROM usuario WHERE (usuario = :usuarioOuEmail OR email = :usuarioOuEmail) AND senha = :senha");
+        $stmt->bindParam(':usuarioOuEmail', $usuarioOuEmail);
         $stmt->bindParam(':senha', $senha);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    
 }
 ?>

@@ -25,7 +25,7 @@
             </div>
 
                 <label>SELECIONE O ARQUIVO</label>
-                <input name="upload" type="file" accept="image/png, image/jpeg"  multiple><br><br>
+                <input name="upload" id="input-especifico" type="file" accept="image/png, image/jpeg"  multiple><br><br>
 
             <div class="input">
                 <label for="senha">Senha:</label>
