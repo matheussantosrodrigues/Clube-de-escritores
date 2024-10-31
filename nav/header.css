@@ -1,13 +1,12 @@
 .logo {
-    margin-top: -20px;
-    width: 84px;
-    height: 90px;
+    width: 220px;
+    height: 84px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+
 }
 
-
-
-nav > ul > li > p {
-    margin-left: 100px;
+.logo:hover {
+    transform: translate(3px, -3px); /* Move para cima e para a direita */
 }
 
 nav ul {
@@ -18,12 +17,12 @@ nav ul {
 }
 
 nav li {
-    margin: 8px 15px;
+    margin: 8px 30px;
 }
 
 nav li > a {
-    color: #004aad;
     font-size: 20px;
+    color: #ebebeb;
     text-decoration: none;
     position: relative;
 }
@@ -54,40 +53,51 @@ nav a.inicio::after {
     display: none;
 }
 
+header nav {
+    margin-right: -110vh;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 10px;
-    font-weight: 500;    
+    padding: 4px 10px;
+    font-weight: 500;  
+    border: red 2px solid;  
     margin-right: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
-.faixa {
-    height: 10px;
-    width: 100%;
-    background-color: #004aad;
-}
-
 header img {
     width: 140px;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 3%;
     
 }
 
+.fitnessNav {
+    width: 70px;
+}
 
 .dropbtn {
     font-size: 20px;
     border: none;
     background-color: transparent;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #004aad;
+    color: #ebebeb;
+    font-weight: 400;
     cursor: pointer;
     padding-bottom: 5px;
+    align-self: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 }
+
+.dropbtn:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 2px 3px #292261; /* sombra na direção direita-inferior */
+
+  }
 
 .dropdown {
     position: relative;
@@ -95,15 +105,18 @@ header img {
 }
 
 .dropdown-content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     font-size: 15px;
     display: none;
     position: absolute;
     background-color: #277ceb;
-    color: #ffffff;
+    color: #ebebeb;
+    font-weight: 600;
     border-radius: 10px;
     top: 29px;
     min-width: 240px;
-    font-weight: 600;
+    font-weight: 400;
     box-shadow: 0px 8px 16px 0px #00000033;
     z-index: 1000;
 }
@@ -116,7 +129,7 @@ header img {
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.226);
+    background-color: rgba(216, 181, 181, 0.226);
     color: #ffffff;
     cursor: pointer;
     border-radius: 10px;
@@ -126,3 +139,48 @@ header img {
     display: block;
 }
 
+/* HTML */
+/* <button class="button-28" role="button">Button 28</button> */
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  min-height: 20px;
+  min-width: 0;
+  outline: none;
+  padding: 6px 26px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  background-color: #043b83;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
