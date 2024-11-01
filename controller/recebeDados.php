@@ -1,5 +1,5 @@
 <?php
-require_once '../model/classUsuario.php';
+require_once '../model/conexao.php';
 
 $conn = new Conexao();
 $conn->conectar();
@@ -45,7 +45,7 @@ if(isset($_FILES['upload']))
        
     //mover para pasta do projeto
     $arquivoUpload = move_uploaded_file($arquivo["tmp_name"],$caminho);
-    $conn->validaUsuario($usuario, $senha, $email);
+    $conn->validaUsuario($usuario, $senha, $caminho, $email);
 }
 // var_dump($usuario);
 // var_dump($senha);

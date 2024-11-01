@@ -23,7 +23,10 @@
                 <label for="nome">Email:</label>
                 <input type="text" id="email" name="email"  required>
             </div>
-            
+
+                <label>SELECIONE O ARQUIVO</label>
+                <input name="upload" id="input-especifico" type="file" accept="image/png, image/jpeg"  multiple><br><br>
+
             <div class="input">
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required>
