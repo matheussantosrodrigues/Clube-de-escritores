@@ -34,16 +34,17 @@ class Header extends HTMLElement {
             <nav class="nav-header">
                 <ul>
                     <li class="dropdown dropbtn">
-                        <div class="fitnessNav">Cadastrar</div>
+                        <div class="fitnessNav">Sign in</div>
                         <div class="dropdown-content">
-                            <a href="${this.baseUrl}cadastro.php">• Usuário</a>
+                            <a href="${this.baseUrl}cadastro.php">• User</a>
                         </div>
                     </li>
-                    <li id="menu-margem"><a href="${this.baseUrl}login.php">Login</li>
+                    <li id="menu-margem" class="button-28" role="button"><a href="${this.baseUrl}login.php" >
+                        Sign up
+                    </li>
                 </ul>
             </nav>
         </header>
-        <div class="faixa"></div>
         `;
     }
 }
